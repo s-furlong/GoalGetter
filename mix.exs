@@ -14,6 +14,7 @@ defmodule GoalGetter.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {GoalGetter.Application, []},
       extra_applications: [:logger]
     ]
   end
