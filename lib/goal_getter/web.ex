@@ -6,8 +6,7 @@ defmodule GoalGetter.Web do
   end
 
   def call(conn, _opts) do
-    conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(200, "Hello World")
+    conn = put_resp_content_type(conn, "text/plain")
+    send_resp(conn, 200, GoalGetter.run())
   end
 end
